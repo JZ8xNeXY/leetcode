@@ -15,12 +15,12 @@ class Solution:
 
         # return -1
 
-        duplicates = set()
         position = {}
+        duplicates = set()
 
         for i, char in enumerate(s):
             if char in position:
-                duplicates.add(char)
+                duplicates.add(s)
             else:
                 position[char] = i
 
