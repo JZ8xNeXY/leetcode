@@ -1,15 +1,23 @@
-def moveZeroes(nums):
-    nonZeroIndex = 0
-    for currentIndex in range(len(nums)):
-        if nums[currentIndex] != 0:
-            nums[nonZeroIndex] = nums[currentIndex]
-            nonZeroIndex += 1
+from typing import List
 
-    for i in range(nonZeroIndex, len(nums)):
-        nums[i] = 0
 
-    return nums
+class Solution:
+    def move_zeroes(self, nums: List[int]) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        zero_index = 0
 
-    # テストケース
+        for num in nums:
+            if num != 0:
+                nums[zero_index] = num
+                zero_index += 1
+
+        for j in range(zero_index, len(nums)):
+            nums[j] = 0
+
+
 nums = [0, 1, 0, 3, 12]
-print(moveZeroes(nums))
+solution = Solution()
+solution.move_zeroes(nums)
+print(nums)
