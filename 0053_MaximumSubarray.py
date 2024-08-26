@@ -1,17 +1,22 @@
-def maxSubArray(nums):
-    if not nums:
-        return 0
-
-    current_sum = nums[0]
-    max_sum = nums[0]
-
-    for i in range(1, len(nums)):
-        current_sum = max(nums[i], current_sum + nums[i])
-        max_sum = max(max_sum, current_sum)
-
-    return max_sum
+from typing import List
 
 
-print(maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4]))
-print(maxSubArray([1]))
-print(maxSubArray([5, 4, -1, 7, 8]))
+class Solution:
+    def maxSubArray(self, nums: List[int]) -> int:
+
+        if not nums:
+            return None
+
+        max_num = current_num = nums[0]
+
+        for num in nums[1:]:
+            current_num = max(num, current_num + num)
+
+            if current_num > max_num:
+                max_num = current_num
+
+        return max_num
+
+
+nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
+solution = Solution().maxSubArray(nums)
