@@ -14,7 +14,8 @@ class Solution:
         #     start += 1
         #     end -= 1
 
-        return s
+        if not s:
+            return
 
         start = 0
         end = len(s) - 1
