@@ -14,6 +14,7 @@ class Solution:
 
             stack.append(num)
 
+        print([next_greater[num] for num in nums1])
         return [next_greater[num] for num in nums1]
 
 
