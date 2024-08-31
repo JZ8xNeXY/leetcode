@@ -1,4 +1,4 @@
-from typing in list
+from typing import list
 
 
 class Solution:

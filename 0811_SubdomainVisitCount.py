@@ -11,12 +11,12 @@ class Solution:
             count = int(count)
 
             subdomains = domain.split('.')
-            print(subdomains)
             for i in range(len(subdomains)):
                 subdomain = '.'.join(subdomains[i:])
+
                 count_dict[subdomain] += count
 
-        result = [f"{cnt} {dom}" for dom, cnt in count_dict.items()]
+        result = [f"{cnt} {dmn}" for dmn, cnt in count_dict.items()]
         print(result)
         return result
 
