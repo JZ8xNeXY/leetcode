@@ -24,6 +24,7 @@ class Solution:
         while right:
             if left.val != right.val:
                 return False
+
             left = left.next
             right = right.next
 
