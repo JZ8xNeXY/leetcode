@@ -17,4 +17,4 @@ class Solution:
 
 solution = Solution()
 
-solution.climbStairs(5)
+solution.climbStairs(15)
