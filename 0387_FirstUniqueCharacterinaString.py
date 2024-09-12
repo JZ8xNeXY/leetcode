@@ -1,35 +1,24 @@
-from collections import Counter
-
-
 class Solution:
     def firstUniqChar(self, s: str) -> int:
         if not s:
             return -1
 
-        # frequency = Counter(s)
-        # print(frequency)
-
-        # for index, char in enumerate(s):
-        #     if frequency[char] == 1:
-        #         return index
-
-        # return -1
-
+        duplicate = set()
         position = {}
-        duplicates = set()
 
-        for i, char in enumerate(s):
-            if char in position:
-                duplicates.add(s)
+        for index, char in enumerate(s):
+            if char not in position:
+                position[char] = index
             else:
-                position[char] = i
+                duplicate.add(char)
 
         for char in s:
-            if char not in duplicates:
+            if char not in duplicate:
                 return position[char]
 
         return -1
 
 
+s = "leetcode"
 solution = Solution()
-print(solution.firstUniqChar("leetcode"))
+print(solution.firstUniqChar(s))
