@@ -16,7 +16,6 @@ class Solution:
         for num in nums:
             for i in range(target, num-1, -1):
                 dp[i] = dp[i] or dp[i-num]
-            print(dp)
 
         return dp[target]
 
