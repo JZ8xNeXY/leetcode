@@ -1,23 +1,24 @@
 from typing import List
+from collections import deque
 
 
-# 深さ優先（DFS)
+# 幅優先（BFS)
 class Solution:
     def canVisitAllRooms(self, rooms: List[List[int]]) -> bool:
         n = len(rooms)
 
         visited = [False] * n
 
-        stack = [0]
+        quque = deque([0])
 
         visited[0] = True
 
-        while stack:
-            current_room_key = stack.pop()
+        while quque:
+            current_room_key = quque.popleft()
             for key in rooms[current_room_key]:
                 if not visited[key]:
                     visited[key] = True
-                    stack.append(key)
+                    quque.append(key)
 
         return all(visited)
 
