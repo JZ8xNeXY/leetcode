@@ -15,6 +15,8 @@ class Solution:
 
         visited = [False] * n
 
+        print(graph)
+
         def dfs(node, parent):
             visited[node] = True
             for neighbor in graph[node]:
