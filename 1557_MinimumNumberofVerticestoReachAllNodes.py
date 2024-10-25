@@ -5,7 +5,7 @@ class Solution:
     def findSmallestSetOfVertices(self, n: int, edges: List[List[int]]) -> List[int]:
         count = [0] * n
 
-        for u, v in edges:
+        for _, v in edges:
             count[v] += 1
 
         result = []
@@ -17,6 +17,7 @@ class Solution:
         return result
 
 
-n = 6,
+n = 6
 edges = [[0, 1], [0, 2], [2, 5], [3, 4], [4, 2]]
 solution = Solution()
+print(solution.findSmallestSetOfVertices(n, edges))
