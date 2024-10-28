@@ -31,3 +31,12 @@ class Solution:
 s = "words and 987"
 solution = Solution()
 print(solution.myAtoi(s))
+
+# 使用例
+s = " -042"
+solution = Solution()
+print(solution.myAtoi(s))
+
+s = "1337c0d3"
+solution = Solution()
+print(solution.myAtoi(s))
