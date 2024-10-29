@@ -6,9 +6,7 @@ class Solution:
         set1 = set(nums1)
         set2 = set(nums2)
 
-        result = list(set1 & set2)
-
-        return result
+        return list(set1 & set2)
 
 
 nums1 = [1, 2, 2, 1]
