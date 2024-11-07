@@ -1,7 +1,7 @@
 class TrieNode:
     def __init__(self):
         self.children = {}  # 子ノードを辞書で管理
-        self.is_end_of_word = False  # 単語の終端を示すフラグな
+        self.is_end_of_word = False  # 単語の終端を示すフラグなな
 
 
 class Trie:
