@@ -12,7 +12,9 @@ class Solution:
         deq = deque()
         result = []
 
-        for index in range(len(nums)):
+        n = len(nums)
+
+        for index in range(n):
             if deq and deq[0] < index - k + 1:
                 deq.popleft()
 
