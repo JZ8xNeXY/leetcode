@@ -11,7 +11,6 @@ class Solution:
         merged = []
 
         for interval in intervals:
-            print(interval)
             if not merged or merged[-1][1] < interval[0]:
                 merged.append(interval)
             else:
