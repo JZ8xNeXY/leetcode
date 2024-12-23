@@ -21,7 +21,7 @@ class Solution(object):
         def has_cycle(course):
             if visited[course] == 1:
                 return True
-            if visited[course] == 2:
+            if visited[course] == 2:  # 再探索を防ぐ
                 return False
 
             visited[course] = 1
