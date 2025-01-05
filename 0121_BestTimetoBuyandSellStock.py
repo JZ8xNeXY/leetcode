@@ -14,10 +14,3 @@ class Solution:
             max_profit = max(max_profit, price - min_price)
 
         return max_profit
-
-
-# テストケース
-prices = [7, 1, 5, 3, 6, 4, 10]
-
-solution = Solution().maxProfit(prices)
-print(solution)
