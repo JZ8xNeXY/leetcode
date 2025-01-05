@@ -13,6 +13,7 @@ class Solution(object):
             for start in range(end + 1):
                 if s[start] == s[end] and (end - start <= 1 or is_palindrome[start + 1][end - 1]):
                     is_palindrome[start][end] = True
+        print(is_palindrome)
 
         dp = [float('inf')] * n
         for end in range(n):
@@ -22,6 +23,7 @@ class Solution(object):
                 for start in range(end):
                     if is_palindrome[start + 1][end]:
                         dp[end] = min(dp[end], dp[start] + 1)
+        print(dp)
 
         return dp[-1]
 
