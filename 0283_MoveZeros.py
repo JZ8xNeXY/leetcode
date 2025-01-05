@@ -6,13 +6,16 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
+        if not nums:
+            return None
 
-        zero_index = 0
+        index = 0
 
-        for num in nums:
+        for _, num in enumerate(nums):
             if num != 0:
-                nums[zero_index] = num
-                zero_index += 1
+                nums[index] = num
+                index += 1
 
-        for j in range(zero_index, len(nums)):
-            nums[j] = 0
+        for _ in range(index, len(nums)):
+            nums[index] = 0
+            index += 1
