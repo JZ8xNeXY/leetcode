@@ -6,6 +6,7 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
+
         zero_index = 0
 
         for num in nums:
@@ -15,9 +16,3 @@ class Solution:
 
         for j in range(zero_index, len(nums)):
             nums[j] = 0
-
-
-nums = [0, 1, 0, 3, 12]
-solution = Solution()
-solution.move_zeroes(nums)
-print(nums)
