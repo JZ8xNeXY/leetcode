@@ -1,19 +1,17 @@
-def removeDuplicates(nums):
-    if not nums:
-        return 0
-
-    k = 1
-    for i in range(1, len(nums)):
-        if nums[i] != nums[i-1]:
-            nums[k] = nums[i]
-            k += 1
-
-    for i in range(k, len(nums)):
-        nums[i] = None
-
-    return k
+from typing import List
 
 
-nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:
+        if not nums:
+            return 0
 
-print(removeDuplicates(nums))
+        index = 1
+
+        for i, num in range(1, len(nums)):
+            if nums[i] != nums[i-1]:
+                nums[index] = num
+                index += 1
+
+        for i in range(index, len(nums)):
+            nums[index] = None
