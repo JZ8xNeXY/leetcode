@@ -11,9 +11,3 @@ class Solution:
             contains_set.add(num)
 
         return False
-
-
-solution = Solution()
-print(solution.containsDuplicate([1, 2, 3, 1]))  # 出力: True
-print(solution.containsDuplicate([1, 2, 3, 4]))  # 出力: False
-print(solution.containsDuplicate([1, 1, 1, 3, 3, 4, 3, 2, 4, 2]))  # 出力: True
