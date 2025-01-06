@@ -20,10 +20,3 @@ class Solution:
             nums[start], nums[end] = nums[end], nums[start]
             start += 1
             end -= 1
-
-
-# テストケース
-solution = Solution()
-nums = [1, 2, 3, 4, 5, 6, 7]
-solution.rotate(nums, 3)
-print(nums)
