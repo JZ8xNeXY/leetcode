@@ -14,7 +14,3 @@ class Solution:
                 result.append(i + 1)
 
         return result
-
-
-solution = Solution()
-print(solution.findDisappearedNumbers([4, 3, 2, 7, 8, 2, 3, 1]))
