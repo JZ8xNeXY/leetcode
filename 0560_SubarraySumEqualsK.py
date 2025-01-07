@@ -22,9 +22,3 @@ class Solution(object):
             prefix_sum_count[current_sum] += 1
 
         return count
-
-
-nums = [1, 1, 1]
-k = 2
-solution = Solution()
-print(solution.subarraySum(nums, k))
