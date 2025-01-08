@@ -19,16 +19,3 @@ class Solution(object):
                 left += 1
 
         return min_length if min_length != float('inf') else 0
-
-
-target = 7
-nums = [2, 3, 1, 2, 4, 3]
-
-solution = Solution()
-print(solution.minSubArrayLen(target, nums))
-
-target = 11
-nums = [1, 1, 1, 1, 1, 1]
-
-solution = Solution()
-print(solution.minSubArrayLen(target, nums))
