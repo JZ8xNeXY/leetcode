@@ -1,22 +1,18 @@
 class Solution:
     def countAndSay(self, n: int) -> str:
         if n == 1:
-            return "1"
+            return '1'
 
-        previous_term = self.countAndSay(n - 1)
-        result = ""
-        i = 0
+        preview_term = self.countAndSay(n-1)
+        result = ''
+        index = 0
 
-        while i < len(previous_term):
+        while index < len(preview_term):
             count = 1
-            while i + 1 < len(previous_term) and previous_term[i] == previous_term[i + 1]:
+            while index + 1 < len(preview_term) and preview_term[index] == preview_term[index+1]:
                 count += 1
-                i += 1
-            result += str(count) + previous_term[i]
-            i += 1
+                index += 1
+            result += str(count) + preview_term[index]
+            index += 1
 
         return result
-
-
-solution = Solution()
-print(solution.countAndSay(5))
