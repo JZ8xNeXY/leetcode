@@ -13,20 +13,17 @@ class Solution:
             return strs[left]
 
         mid = (left + right) // 2
-        lcpLeft = self._longestCommonPrefix(strs, left, mid)
-        lcpRight = self._longestCommonPrefix(strs, mid + 1, right)
 
-        return self._commonPrefix(lcpLeft, lcpRight)
+        left_str = self._longestCommonPrefix(strs, left, mid)
+        right_str = self._longestCommonPrefix(strs, mid+1, right)
+
+        return self._commonPrefix(left_str, right_str)
 
     def _commonPrefix(self, left: str, right: str) -> str:
-        minLength = min(len(left), len(right))
-        for i in range(minLength):
-            if left[i] != right[i]:
-                return left[:i]
+        min_length = min(len(left), len(right))
 
-        return left[:minLength]
+        for index in range(min_length):
+            if left[index] != right[index]:
+                return left[:index]
 
-
-strs = ["flower", "flow", "flight"]
-solution = Solution()
-print(solution.longestCommonPrefix(strs))  # 出力: "fl"
+        return left[:min_length]
