@@ -16,15 +16,7 @@ class Solution(object):
         for i in range(n-2, -1, -1):
             right_products[i] = right_products[i+1] * nums[i+1]
 
-        print(left_products)
-        print(right_products)
-
         for i in range(n):
             answer[i] = left_products[i] * right_products[i]
 
         return answer
-
-
-nums = [1, 2, 3, 4]
-solution = Solution()
-print(solution.productExceptSelf(nums))
