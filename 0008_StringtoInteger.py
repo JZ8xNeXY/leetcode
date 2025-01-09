@@ -6,10 +6,10 @@ class Solution:
         INT_MAX = 2**31 - 1
         INT_MIN = -2**31
 
-        while i < len(s) and s[i] == " ":
+        while i < len(s) and s[i] == ' ':
             i += 1
 
-        if i < len(s) and s[i] in ('-', '+'):
+        while i < len(s) and s[i] in ('-', '+'):
             sign = -1 if s[i] == '-' else 1
             i += 1
 
@@ -25,18 +25,3 @@ class Solution:
             return INT_MIN
 
         return num
-
-
-# 使用例
-s = "words and 987"
-solution = Solution()
-print(solution.myAtoi(s))
-
-# 使用例
-s = " -042"
-solution = Solution()
-print(solution.myAtoi(s))
-
-s = "1337c0d3"
-solution = Solution()
-print(solution.myAtoi(s))
