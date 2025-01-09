@@ -1,4 +1,3 @@
-
 def romanToInt(s: str) -> int:
     roman_dict = {
         'I': 1,
@@ -21,10 +20,3 @@ def romanToInt(s: str) -> int:
         present_value = roman_dict[char]
 
     return total
-
-
-print(romanToInt('III'))
-print(romanToInt('IV'))
-print(romanToInt('IX'))
-print(romanToInt('LVIII'))
-print(romanToInt('MCMXCIV'))
