@@ -23,8 +23,3 @@ class Solution(object):
                 current_string += char
 
         return current_string
-
-
-s = "3[a]2[bc]"
-solution = Solution()
-print(solution.decodeString(s))
