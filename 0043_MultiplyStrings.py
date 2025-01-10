@@ -19,13 +19,6 @@ class Solution(object):
                 result[p2] = total % 10
                 result[p1] += total // 10
 
-        result_str = ''.join(map(str, result))
-        result_str = result_str.lstrip('0')
+        result_str = ''.join(map(str, result)).lstrip('0')
 
         return result_str if result_str else '0'
-
-
-num1 = '2'
-num2 = '3'
-solution = Solution()
-print(solution.multiply(num1, num2))
