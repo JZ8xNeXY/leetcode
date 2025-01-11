@@ -16,7 +16,3 @@ class Solution:
                 max_num = current_num
 
         return max_num
-
-
-nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
-solution = Solution().maxSubArray(nums)

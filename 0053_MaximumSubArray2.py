@@ -13,8 +13,3 @@ class Solution:
             dp[i] = max(nums[i], dp[i-1] + nums[i])
 
         return max(dp)
-
-
-nums = [-2, 1, -3, 4, -1, 2, 1, -5, 4]
-solution = Solution()
-solution.maxSubArray(nums)
