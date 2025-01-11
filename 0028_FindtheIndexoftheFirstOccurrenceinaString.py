@@ -13,9 +13,3 @@ class Solution:
                 return index
 
         return -1
-
-
-haystack = "leetcode"
-needle = "leeto"
-solution = Solution()
-solution.strStr(haystack, needle)
