@@ -21,10 +21,3 @@ class MyQueue:
 
     def empty(self) -> bool:
         return not self.stack_in and not self.stack_out
-
-
-obj = MyQueue()
-obj.push(x)
-param_2 = obj.pop()
-param_3 = obj.peek()
-param_4 = obj.empty()
