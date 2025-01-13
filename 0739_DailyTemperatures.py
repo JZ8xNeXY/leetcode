@@ -14,10 +14,4 @@ class Solution:
 
             stack.append(i)
 
-        print(answer)
         return answer
-
-
-temperatures = [73, 74, 75, 71, 69, 72, 76, 73]
-solution = Solution()
-solution.dailyTemperatures(temperatures)
