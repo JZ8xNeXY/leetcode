@@ -13,14 +13,3 @@ class Solution:
                     return False
 
         return not stack
-
-
-# クラスのインスタンスを作成
-solution = Solution()
-
-# メソッドを正しく呼び出す
-print(solution.isValid("()"))      # True
-print(solution.isValid("()[]{}"))  # True
-print(solution.isValid("(]"))      # False
-print(solution.isValid("([)]"))    # False
-print(solution.isValid("{[]}"))    # True
