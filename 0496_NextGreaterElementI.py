@@ -14,11 +14,4 @@ class Solution:
 
             stack.append(num)
 
-        print([next_greater[num] for num in nums1])
         return [next_greater[num] for num in nums1]
-
-
-nums1 = [2, 4]
-nums2 = [1, 2, 3, 4]
-solution = Solution()
-solution.nextGreaterElement(nums1, nums2)
