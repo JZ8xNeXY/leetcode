@@ -16,10 +16,3 @@ class Solution(object):
             return ''.join(stack)
 
         return build_string(s) == build_string(t)
-
-
-# テストケース
-s = "xywrrmp"
-t = "xywrrmu#p"
-solution = Solution()
-print(solution.backspaceCompare(s, t))
