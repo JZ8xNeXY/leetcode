@@ -34,11 +34,3 @@ class MyStack(object):
         :rtype: bool
         """
         return not self.queue1
-
-
-myStack = new MyStack()
-myStack.push(1)
-myStack.push(2)
-myStack.top()
-myStack.pop()
-myStack.empty()
