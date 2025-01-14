@@ -16,8 +16,3 @@ class Solution(object):
             else:
                 stack.append(asteroid)
         return stack
-
-
-asteroids = [10, 2, -5]
-solution = Solution()
-print(solution.asteroidCollision(asteroids))
