@@ -1,3 +1,6 @@
+from collections import Counter
+
+
 class Solution(object):
     def canConstruct(self, ransomNote, magazine):
         """
@@ -6,20 +9,11 @@ class Solution(object):
         :rtype: bool
         """
 
-        magazine_dict = {}
+        ransomNote_count = Counter(ransomNote)
+        magazine_count = Counter(magazine)
 
-        for char in magazine:
-            if char in magazine_dict:
-                magazine_dict[char] += 1
-            else:
-                magazine_dict[char] = 1
-
-        for char in ransomNote:
-            if char in magazine_dict:
-                magazine_dict[char] -= 1
-                if magazine_dict[char] < 0:
-                    return False
-            else:
+        for char, count in ransomNote_count.items():
+            if magazine_count[char] < count:
                 return False
 
         return True

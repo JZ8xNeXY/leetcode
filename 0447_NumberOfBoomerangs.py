@@ -24,8 +24,3 @@ class Solution(object):
                 result += count * (count - 1)
 
         return result
-
-
-points = [[0, 0], [1, 0], [2, 0]]
-soluiton = Solution()
-print(soluiton.numberOfBoomerangs(points))
