@@ -17,11 +17,4 @@ class Solution:
                 count_dict[subdomain] += count
 
         result = [f"{cnt} {dmn}" for dmn, cnt in count_dict.items()]
-        print(result)
         return result
-
-
-cpdomains = ["900 google.mail.com", "50 yahoo.com",
-             "1 intel.mail.com", "5 wiki.org"]
-solution = Solution()
-solution.subdomainVisits(cpdomains)
