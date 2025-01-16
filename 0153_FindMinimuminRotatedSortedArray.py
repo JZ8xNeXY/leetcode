@@ -16,8 +16,3 @@ class Solution(object):
                 right = mid
 
         return nums[left]
-
-
-nums = [3, 4, 5, 1, 2]
-solution = Solution()
-print(solution.findMin(nums))
