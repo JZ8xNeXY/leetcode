@@ -29,11 +29,3 @@ class Solution(object):
             k -= 1
 
         return result
-
-
-nums1 = [1, 7, 11]
-nums2 = [2, 4, 6]
-k = 3
-
-solution = Solution()
-print(solution.kSmallestPairs(nums1, nums2, k))
