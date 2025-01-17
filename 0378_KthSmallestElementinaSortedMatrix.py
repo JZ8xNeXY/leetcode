@@ -16,9 +16,3 @@ class Solution:
                 heapq.heappush(heap, (matrix[row][col+1], row, col+1))
 
         return heapq.heappop(heap)[0]
-
-
-matrix = [[1, 5, 9], [10, 11, 13], [12, 13, 15]]
-k = 3
-solution = Solution()
-print(solution.kthSmallest(matrix, k))
