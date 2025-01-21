@@ -17,12 +17,4 @@ class Solution:
                     dp[i][j] = min(dp[i - 1][j] + 1, dp[i]
                                    [j - 1] + 1, dp[i - 1][j - 1] + 1)
 
-        print(dp)
         return dp[len1][len2]
-
-
-# 実行例
-word1 = "horse"
-word2 = "ros"
-solution = Solution()
-print(solution.minDistance(word1, word2))
