@@ -18,9 +18,3 @@ class Solution:
                 dp[i] = dp[i] or dp[i-num]
 
         return dp[target]
-
-
-nums = [1, 5, 6]
-
-solution = Solution()
-print(solution.canPartition(nums))
