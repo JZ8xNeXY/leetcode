@@ -11,9 +11,3 @@ class Solution:
                 else:
                     dp[i][j] = max(dp[i][j-1], dp[i-1][j])
         return dp[m][n]
-
-
-text1 = "abc"
-text2 = "ace"
-solution = Solution()
-print(solution.longestCommonSubsequence(text1, text2))
