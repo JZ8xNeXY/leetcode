@@ -21,8 +21,3 @@ class Solution(object):
             cooldown[i] = max(cooldown[i-1], sell[i-1])
 
         return max(cooldown[n-1], sell[n-1])
-
-
-prices = [1, 2, 3, 0, 2]
-solution = Solution()
-print(solution.maxProfit(prices))  # 3
