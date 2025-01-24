@@ -14,14 +14,12 @@ class Solution(object):
         for course, prereq in prerequisites:
             graph[prereq].append(course)
 
-        print(graph)
-
         visited = [0] * numCourses
 
         def has_cycle(course):
             if visited[course] == 1:
                 return True
-            if visited[course] == 2:  # 再探索を防ぐ
+            if visited[course] == 2:
                 return False
 
             visited[course] = 1
@@ -38,10 +36,3 @@ class Solution(object):
                 return False
 
         return True
-
-
-numCourses = 4
-prerequisites = [[1, 0], [2, 1], [3, 2], [1, 3]]
-
-solution = Solution()
-print(solution.canFinish(numCourses, prerequisites))

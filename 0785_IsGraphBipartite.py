@@ -10,27 +10,19 @@ class Solution:
 
         for node in range(n):
             if not visited[node]:
-                quque = deque([node])
+                queue = deque([node])
                 visited[node] = True
                 color[node] = 1
+                queue = deque([node])
 
-            print(visited)
-
-            while quque:
-                current = quque.popleft()
-                print(current)
+            while queue:
+                current = queue.popleft()
                 for neighbor in graph[current]:
                     if not visited[neighbor]:
                         color[neighbor] = -color[current]
                         visited[neighbor] = True
-                        quque.append(neighbor)
+                        queue.append(neighbor)
 
                     elif color[neighbor] == color[current]:
                         return False
         return True
-
-
-graph = [[1, 2], [0, 3], [0, 3], [1, 2]]
-solution = Solution()
-
-print(solution.isBipartite(graph))

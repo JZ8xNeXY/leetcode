@@ -30,10 +30,3 @@ class Solution(object):
                     queue.append(neighbor)
 
         return visited_count == numCourses
-
-
-numCourses = 4
-prerequisites = [[1, 0], [2, 1], [3, 2], [1, 3]]
-
-solution = Solution()
-print(solution.canFinish(numCourses, prerequisites))
