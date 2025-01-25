@@ -14,10 +14,3 @@ class Solution:
                 return i
 
         return -1
-
-
-n = 3
-trust = [[1, 3], [2, 3]]
-
-solution = Solution()
-print(solution.findJudge(n, trust))
