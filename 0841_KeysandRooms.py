@@ -19,8 +19,3 @@ class Solution:
                     queue.append(neighbor)
 
         return all(visited)
-
-
-rooms = [[1, 2, 3], [2], [3], []]
-solution = Solution()
-print(solution.canVisitAllRooms(rooms))
