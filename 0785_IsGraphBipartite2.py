@@ -13,7 +13,7 @@ class Solution:
                 if color[neighbor] == 0:
                     if not dfs(neighbor, -current_color):
                         return False
-                elif color[neighbor] == color:
+                elif color[neighbor] == current_color:
                     return False
             return True
 
