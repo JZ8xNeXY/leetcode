@@ -10,28 +10,19 @@ class Solution:
             graph[u].append(v)
             graph[v].append(u)
 
-        quque = deque([source])
+        n = len(edges)
         visited = [False] * n
-        visited[source] = True
+        queue = deque([source])
 
-        while quque:
-            node = quque.popleft()
+        while queue:
+            current_node = queue.popleft()
 
-            if node == destination:
+            if current_node == destination:
                 return True
 
-            for neighbor in graph[node]:
+            for neighbor in graph[current_node]:
                 if not visited[neighbor]:
                     visited[neighbor] = True
-                    quque.append(neighbor)
+                    queue.append(neighbor)
 
         return False
-
-
-n = 3
-edges = [[0, 1], [1, 2], [2, 0]]
-source = 0
-destination = 2
-
-solution = Solution()
-print(solution.validPath(n, edges, source, destination))
