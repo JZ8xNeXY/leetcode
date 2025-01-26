@@ -16,8 +16,6 @@ class Solution:
         visited = [False] * n
         visited[0] = True
 
-        print(graph)  # {0: [1, 2, 3], 1: [0, 4], 2: [0], 3: [0], 4: [1]})
-
         queue = deque([(0, -1)])
 
         while queue:
@@ -31,9 +29,3 @@ class Solution:
                         return False
 
         return all(visited)
-
-
-n = 5
-edges = [[0, 1], [0, 2], [0, 3], [1, 4]]
-solution = Solution()
-print(solution.validTree(n, edges))
