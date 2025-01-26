@@ -21,7 +21,7 @@ class Solution:
             visited[node] = True
             for neighbor in graph[node]:
                 if not visited[neighbor]:
-                    if not dfs(neighbor, node):  # nodeをparentとして渡す
+                    if not dfs(neighbor, node):
                         return False
                 elif neighbor != parent:
                     return False
@@ -31,9 +31,3 @@ class Solution:
             return False
 
         return all(visited)
-
-
-n = 5
-edges = [[0, 1], [0, 2], [0, 3], [1, 4]]
-solution = Solution()
-print(solution.validTree(n, edges))
