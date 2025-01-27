@@ -25,8 +25,3 @@ class Solution:
         backtrack(0, [])
 
         return result
-
-
-solution = Solution()
-nums = [1, 2, 2]
-print(solution.subsetsWithDup(nums))
