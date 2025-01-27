@@ -29,9 +29,3 @@ class Solution:
         backtrack(0, [], target)
 
         return results
-
-
-candidates = [10, 1, 2, 7, 6, 1, 5]
-target = 8
-solution = Solution()
-print(solution.combinationSum2(candidates, target))
