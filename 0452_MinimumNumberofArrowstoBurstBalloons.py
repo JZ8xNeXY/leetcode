@@ -18,8 +18,3 @@ class Solution:
                 cuurent_arrow_position = end
 
         return arrow
-
-
-points = [[10, 16], [2, 8], [1, 6], [7, 12]]
-solution = Solution()
-print(solution.findMinArrowShots(points))
