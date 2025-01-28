@@ -14,8 +14,3 @@ class Solution:
                 candies[j] = max(candies[j], candies[j + 1] + 1)
 
         return sum(candies)
-
-
-ratings = [0, 1, 2]
-solution = Solution()
-print(solution.candy(ratings))
