@@ -16,8 +16,3 @@ class Solution:
                 partions.append(end - start + 1)
                 start = index + 1
         return partions
-
-
-s = "ababcbacadefegdehijhklij"
-solution = Solution()
-print(solution.partitionLabels(s))
