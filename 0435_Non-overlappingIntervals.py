@@ -18,8 +18,3 @@ class Solution(object):
                 non_overlap_count += 1
 
         return n - non_overlap_count
-
-
-intervals = [[1, 2], [1, 3], [2, 3], [3, 4]]
-solution = Solution()
-print(solution.eraseOverlapIntervals(intervals))
