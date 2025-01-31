@@ -27,9 +27,3 @@ class Solution:
                 result.append(nums[deq[0]])
 
         return result
-
-
-nums = [1, 3, -1, -3, 5, 3, 6, 7]
-k = 3
-solution = Solution()
-print(solution.maxSlidingWindow(nums, k))

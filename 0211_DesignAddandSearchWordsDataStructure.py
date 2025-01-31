@@ -32,9 +32,3 @@ class WordDictionary:
             return node.is_end_of_word
 
         return dfs(0, self.root)
-
-
-obj = WordDictionary()
-obj.addWord('word')
-param_2 = obj.search('.ord')
-print(param_2)
