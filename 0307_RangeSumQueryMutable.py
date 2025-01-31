@@ -40,11 +40,3 @@ class NumArray:
 
     def sumRange(self, left: int, right: int) -> int:
         return self.fenwick_tree.sumRange(left, right)
-
-
-nums = [1, 3, 5]
-solution = NumArray(nums)
-
-solution.update(1, 2)
-
-print(solution.sumRange(0, 2))
