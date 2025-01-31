@@ -1,7 +1,7 @@
 class TrieNode:
     def __init__(self):
-        self.children = {}  # 子ノードを辞書で管理
-        self.is_end_of_word = False  # 単語の終端を示すフラグなな
+        self.children = {}
+        self.is_end_of_word = False
 
 
 class Trie:
@@ -34,12 +34,3 @@ class Trie:
                 return False
             node = node.children[char]
         return True
-
-        # Your Trie object will be instantiated and called as such:
-trie = Trie()
-trie.insert("apple")
-print(trie.search("apple"))  # 出力: True
-print(trie.search("app"))    # 出力: False
-print(trie.startsWith("app"))  # 出力: True
-trie.insert("app")
-print(trie.search("app"))    # 出力: True
