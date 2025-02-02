@@ -7,9 +7,7 @@ class Solution:
             if char not in bracket_map:
                 stack.append(char)
             else:
-                top_element = stack.pop() if stack else '#'
-
-                if top_element != bracket_map[char]:
+                if not stack or stack.pop() != bracket_map[char]:
                     return False
 
         return not stack
