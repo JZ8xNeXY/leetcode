@@ -17,7 +17,7 @@ class Solution(object):
                 current_string = ''
             elif char == ']':
                 top_num, prev_string = stack.pop()
-                current_string = prev_string + current_string * top_num
+                current_string = prev_string + (current_string * top_num)
 
             else:
                 current_string += char
