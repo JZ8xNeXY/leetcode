@@ -6,8 +6,8 @@ class Solution:
         dp = [amount + 1] * (amount + 1)
         dp[0] = 0
 
-        for i in range(1, amount+1):
+        for index in range(1, amount+1):
             for coin in coins:
-                if i >= coin:
-                    dp[i] = min(dp[i], dp[i-coin]+1)
+                if index >= coin:
+                    dp[index] = min(dp[index], dp[index-coin]+1)
         return dp[amount] if dp[amount] != amount + 1 else -1
