@@ -12,13 +12,6 @@ class Solution:
 
             for end in range(start, len(s)):
                 if is_palindrome(s[start:end+1]):
-                    path.append(s[start:end+1])
-                    backtrack(end+1, path)
-                    path.pop()
-
+                    backtrack(end+1, path + [s[start:end+1]])
         backtrack(0, [])
         return result
-
-
-solution = Solution()
-print(solution.partition("aab"))
