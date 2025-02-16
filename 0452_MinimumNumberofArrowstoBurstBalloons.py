@@ -13,7 +13,7 @@ class Solution:
         cuurent_arrow_position = points[0][1]
 
         for start, end in points[1:]:
-            if start > cuurent_arrow_position:
+            if cuurent_arrow_position < start:
                 arrow += 1
                 cuurent_arrow_position = end
 
